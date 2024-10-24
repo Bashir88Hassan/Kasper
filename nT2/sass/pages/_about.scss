@@ -1,0 +1,22 @@
+// Import mixin
+@use './../helpers/mixin' as *;
+// Import vars
+@use './../layout/vars' as *;
+
+//start About
+.about{
+    padding-top: var(--section-padding);
+    overflow: hidden;
+    text-align: center;
+    img{
+        position:relative;
+        bottom: -120px;
+        margin-top: -20px;
+        max-width: 100%;
+        @media (max-width: 767px) {
+            bottom: -60px;
+            margin-top: -60px;
+        }
+    }
+}
+//end About

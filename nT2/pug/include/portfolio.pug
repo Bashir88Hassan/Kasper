@@ -1,0 +1,23 @@
+//start Portfolio
+.portfolio 
+    .container 
+        .main-heading 
+            h2 Portfolio 
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi accusantium repudiandae ducimus. Impedit earum eveniet nemo, ad porro soluta quasi amet inventore optio modi quaerat hic quos? Fugit, ex doloremque?
+        ul.shuffle 
+            li.active All 
+            li App 
+            li photo 
+            li web 
+            li print
+        .imgs-container 
+            - for(let i =1; i<9; i++)
+                //start box
+                .box 
+                    img(src="../img/shuffle-0"+i+".jpg", alt="")
+                    .caption 
+                        h4 Awesome Image 
+                        p Photography
+                //end box
+            a(href="#" class = "more") More
+//end portfolio

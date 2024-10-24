@@ -1,0 +1,73 @@
+/*start contact*/
+@use './../helpers/mixin' as *;
+@use './../layout/vars' as *;
+.contact{
+    @include padding();
+    .content{
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            .info{
+                order: -1;
+                text-align: center;
+            }
+        }
+        form{
+            flex-basis:70% ;
+            .main-input{
+                padding: 20px;
+                display: block;
+                border: 1px solid #ccc;
+                margin-bottom: 30px;
+                width: 100%;
+                &:focus{
+                    outline: none;
+                }
+
+            }
+            textarea.main-input{
+                height: 200px;
+            }
+            input[type = "submit"]{
+                background-color: $main-color;
+                color: white;
+                padding: 20px;
+                border: none;
+                display: flex;
+                margin-left: auto;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+        }
+        .info{
+            flex-basis: 25%;
+            h4{
+                text-transform: uppercase;
+                margin-bottom: 30px;
+                font-weight: 500;
+                font-size: 18px;
+            }
+            .phone{
+                display: block;
+                color: #777;
+                margin-bottom: 10px;
+            }
+            h4:nth-of-type(2){
+                margin-top: 90px;
+                @media (max-width: 767px) {
+                    margin-top: 30px;
+                }
+            }
+            address{
+                color: #777;
+                line-height: 2;
+                @media (max-width: 767px){
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+/*end contact*/

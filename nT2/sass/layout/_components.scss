@@ -1,0 +1,42 @@
+/* Start components*/
+.main-heading{
+    text-align: center;
+    h2{
+        font-weight: normal;
+        font-size: 40px;
+        position: relative;
+        margin-bottom: 70px;
+        text-transform: uppercase;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 2px;
+            bottom: -30px;
+            left: 50%;
+            background-color: #333;
+            transform: translateX(-50px);
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            left: 50%;
+            bottom: -38px;
+            transform: translateX(-50%);
+            border: 2px solid #333;
+            border-radius: 50%;
+            background-color: white;
+
+        }
+    }
+    p{
+        width: 550px;
+        margin: 0 auto 100px ;
+        max-width: 100%;
+        line-height: 2;
+        color: #777;
+    }
+}
+/* End components*/

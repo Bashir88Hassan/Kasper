@@ -1,0 +1,72 @@
+/*start subs*/
+@use '../layout/vars' as *;
+@use '../helpers/mixin' as *;
+.subscribe{
+    @include padding();
+    background-image: url("../../img/subscribe.jpg");
+    background-size: cover;
+    position: relative;
+    color: white;
+    &::before{
+        @include overlay();
+    }
+    .container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        @media (max-width: 991px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    form{
+        display: flex;
+        position: relative;
+        width: 500px;
+        max-width: 100%;
+        margin-bottom: 20px;
+        i{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 25px;
+        }
+        input[type = "email"]{
+            border: 1px solid white;
+            border-right: none;
+            background-color: transparent;
+            padding: 20px 20px 20px 60px;
+            caret-color: $main-color;
+            width: calc(100% - 130px);
+        
+        }
+        input[type = "submit"]{
+            width: 130px;
+            background-color: $main-color;
+            color: white;
+            padding: 10px 20px;
+            border: 10x solid white;
+            border-left: none;
+            text-transform: uppercase;
+        }
+        input[type = "submit"]:focus,
+        input[type = "email"]:focus{
+            outline: none;
+        }
+        
+        &::placeholder{
+                color: white;
+            }
+    }
+    p{
+        line-height: 2;
+        margin-left: 50px;
+        text-align: center;
+        @media (max-width: 992px) {
+            margin-top: 30px;
+        }
+    }
+    
+}
+/*end subs*/

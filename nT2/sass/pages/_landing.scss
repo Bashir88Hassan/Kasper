@@ -1,0 +1,79 @@
+// Import vars
+@use "./../layout/vars"as *;
+// Import mixin
+@use './../helpers/mixin'as *;
+
+/*start landing*/
+.landing {
+    min-height: 100vh;
+    background-color: #1f2021;
+    background-image: url("../img/7.jpg");
+    background-size: cover;
+    position: relative;
+
+    .overlay {
+        @include overlay();
+    }
+
+    .text {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 50%;
+        padding: 50px;
+        transform: translatey(-50%);
+        background-color: $transparent-color;
+        display: flex;
+        justify-content: flex-end;
+        color: white;
+
+        @media (max-width: 767px) {
+            width: 100%;
+
+            .content {
+                max-width: 100%;
+            }
+        }
+
+        .content {
+            max-width: 500px;
+
+            h2 {
+                font-size: 32px;
+                font-weight: normal;
+                line-height: 1.5;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    .change-background {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ddd;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    .fa-angle-left {
+        left: 30px;
+    }
+
+    .fa-angle-right {
+        right: 30px;
+    }
+
+    .bullets {
+        @include bullets();
+    }
+}
+
+/*end landing */

@@ -1,0 +1,54 @@
+// Import :root
+@use './sass/layout/vars';
+//import gloabl Rules
+@use './sass/layout/global-rules';
+
+//Import components
+@use './sass/layout/components';
+
+// Import header
+@use './sass/pages/header';
+
+// Import landing
+@use './sass/pages/landing';
+
+//Import Services
+@use './sass/pages/services';
+
+//Import Design
+@use './sass/pages/design';
+
+//import porfolio
+@use './sass/pages/portfolio';
+
+//import video
+@use './sass/pages/video';
+
+//import About
+@use './sass/pages/about';
+
+//import stats
+@use './sass/pages/stats';
+
+//import skills
+@use './sass/pages/skills';
+
+//import quote
+@use './sass/pages/quote';
+
+//import pricing
+@use './sass/pages/pricing';
+
+//import subc
+@use './sass/pages/subscribe';
+
+//import contact
+@use './sass//pages/contact';
+
+//import footer
+@use './sass/pages/footer';
+
+
+
+
+

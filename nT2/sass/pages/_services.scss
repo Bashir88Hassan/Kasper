@@ -1,0 +1,48 @@
+// Import mixin
+@use './../helpers/mixin' as *;
+// Import vars
+@use './../layout/vars' as *;
+/*Start Services*/
+.services{
+    @include padding();
+    @media (min-width: 768px) {
+        .services-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 60px 40px;
+
+        }
+    }
+    .srv-box{
+        display: flex;
+        transition: 0.3s;
+        border-radius: 20px;
+        padding: 20px;
+        &:hover{
+            box-shadow: 0 0 10px #ddd;
+        }
+        @media (max-width:767px) {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 40px;
+            
+        }
+        i{
+            margin-right: 50px;
+            @media (max-width:767px) {
+                margin: 0px 0px 30px;
+            }
+        }
+        h3{
+            margin-bottom: 30px;
+            color: $main-color;
+        }
+        p{
+            line-height: 2;
+            color: #777;
+        }
+    }
+    
+}
+/*end Services*/

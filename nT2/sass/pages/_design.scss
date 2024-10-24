@@ -1,0 +1,58 @@
+// Import mixin
+@use './../helpers/mixin' as *;
+// Import vars
+@use './../layout/vars' as *;
+
+/* Start Design*/
+.design{
+    @include padding();
+    height: 600px;
+    position: relative;
+    background-image: url("../../img/design-features.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    &::before{
+        content: "";
+        @include overlay();
+    }
+    .image,.text{
+        position: relative;
+        z-index: 2;
+        flex: 1;
+    }
+    .image{
+        text-align: center;
+        img{
+            position: relative;
+            bottom: -150px;
+
+        }
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+    .text{
+        color: white;
+        padding: 50px;
+        background-color: $transparent-color;
+        h2{
+            font-weight: normal;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        ul li{
+            padding: 15px 0px;
+        }
+        ul li::before{
+            content: '\f108';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin-right: 20px;
+            position: relative;
+            top: 1px;
+        }
+    }
+}
+/* end Design*/

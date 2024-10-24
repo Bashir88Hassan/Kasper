@@ -1,0 +1,71 @@
+// Import vars
+@use "./../layout/vars" as *;
+// Import mixin
+@use './../helpers/mixin' as *;
+/*Strat portfolio*/
+.portfolio{
+    @include padding();
+    .shuffle{
+        display: flex;
+        justify-content: center;
+        li{
+            padding: 10px;
+            &.active{
+                background-color: $main-color;
+                color: white;
+            }
+        }
+    }
+    .imgs-container{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        .box{
+            position: relative;
+            overflow: hidden;
+            @media (min-width: 768px) {
+                flex-basis: 50%;
+            }
+            @media (min-width: 1199px) {
+                flex-basis: 25%;
+            }
+            img{
+                max-width: 100%;
+                transition: .3s;
+            }
+            .caption{
+                position: absolute;
+                left: 0px;
+                padding: 20px;
+                background-color: white;
+                width: 100%;
+                transition: .3s;
+                bottom: -100%;
+                h4{
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                p{
+                    color: $main-color;
+                }
+            }
+            &:hover .caption{
+                bottom: 0;
+            }
+            &:hover img{
+                transform: rotate(3deg) scale(1.1);
+            }
+        }
+    }
+    .more{
+        background-color: $main-color;
+        color: white;
+        padding: 15px 20px ;
+        display: block;
+        width: fit-content;
+        margin: 30px auto;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+/*end portfolio*/

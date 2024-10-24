@@ -1,0 +1,44 @@
+// Import mixin
+@use './../helpers/mixin' as *;
+// Import vars
+@use './../layout/vars' as *;
+
+/*Start video*/
+.video{
+    position: relative;
+    &::before{
+        content: "";
+        @include overlay();
+        background-color: rgba(0, 0, 0, 0.4)
+    }
+    video{
+        width: 100%;
+    }
+    .text{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 50px;
+        background-color: $transparent-color;
+        color: white;
+        text-align: center;
+        h2{
+            margin: 0 0 30px;
+            text-transform: uppercase;
+            font-weight: normal;
+
+        }
+        p{
+            margin-bottom: 30px;
+        }
+        button{
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            text-transform: uppercase;
+        }
+    }
+}
+/*end video*/

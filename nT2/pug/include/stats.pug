@@ -1,0 +1,15 @@
+//start stats
+.stats 
+    .container 
+        -let a = ["mug-hot", "folder", "envelope", "trophy"]
+        -let b = ["1.236", "256", "1,743", "17"]
+        -let c = ["Coffee Drinks", "Completed Projects", "Mail Sent", "Award Received"]
+        -for(let i =0; i<4; i++)
+            //start box 
+            .box|
+                |
+                i(class = "fas fa-"+a[i])
+                .number #{b[i]}
+                p #{c[i]}
+            //end box
+//end stats
